@@ -16,10 +16,10 @@ export const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_ue31e5a",
-        "template_wwg5oaq",
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
         formRef.current,
-        "user_L1O5QL4Cdf5PRDuU6V7il"
+        process.env.REACT_APP_USER_ID
       )
       .then(
         (result) => {
